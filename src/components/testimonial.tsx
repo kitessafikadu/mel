@@ -60,8 +60,8 @@ export default function Testimonial() {
               ))}
             </CarouselContent>
 
-            <CarouselPrevious className="hidden sm:block" />
-            <CarouselNext className="hidden sm:block" />
+            <CarouselPrevious className="hidden sm:flex !top-auto !bottom-4 !left-4 !-translate-y-0 z-20" />
+            <CarouselNext className="hidden sm:flex !top-auto !bottom-4 !right-4 !-translate-y-0 z-20" />
           </Carousel>
         </div>
       </div>

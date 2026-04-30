@@ -125,7 +125,7 @@ const Navbar = () => {
           <span
             className={`text-xl font-bold tracking-tight ${scrolled ? "text-slate-900" : "text-slate-900 md:text-white"}`}
           >
-            MEL <span className="text-cyan-600">MEDICATED</span>
+            Mel
           </span>
         </div>
 
@@ -140,9 +140,6 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
-          <Button className="bg-cyan-600 hover:bg-cyan-700 text-white rounded-full px-6">
-            Inquire Now
-          </Button>
         </div>
 
         {/* Mobile Toggle */}
@@ -192,7 +189,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center pt-20 overflow-hidden"
+      className="relative min-h-screen flex items-center pt-20 overflow-hidden pb-24 lg:pb-40"
     >
       {/* Background with Overlay */}
       <div className="absolute inset-0 z-0">
@@ -223,21 +220,6 @@ const Hero = () => {
               with the art of confectionery. We create delicious, effective
               medicated treats that support your daily health journey.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                size="lg"
-                className="bg-cyan-600 hover:bg-cyan-700 text-white rounded-full px-8 h-14 text-lg"
-              >
-                View Our Products
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="text-white border-white/30 hover:bg-white/10 rounded-full px-8 h-14 text-lg backdrop-blur-sm"
-              >
-                Learn Our Story
-              </Button>
-            </div>
           </motion.div>
         </div>
       </div>
@@ -414,29 +396,12 @@ const Products = () => {
   );
 };
 
-const TrustSection = () => {
-  return (
-    <section className="py-20 bg-cyan-900 text-white overflow-hidden relative">
-      <div className="absolute top-0 right-0 w-1/2 h-full opacity-10">
-        <img
-          src="https://storage.googleapis.com/dala-prod-public-storage/generated-images/86ad4178-a1e6-434d-a5bb-4b435993f7db/trust-and-care---professional-endorsement-d7980e22-1777496771091.webp"
-          className="w-full h-full object-cover"
-          alt="Trust"
-        />
-      </div>
-    </section>
-  );
-};
-
 const FAQSection = () => {
   return (
     <section id="faq" className="py-24 bg-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-3 gap-12">
           <div className="lg:col-span-1">
-            <span className="text-cyan-600 font-bold tracking-wider uppercase text-sm mb-4 block">
-              Help Center
-            </span>
             <h2 className="text-3xl font-bold text-slate-900 mb-6">
               Frequently Asked Questions
             </h2>
@@ -445,9 +410,6 @@ const FAQSection = () => {
               support team for detailed information about our products and
               processes.
             </p>
-            <Button variant="outline" className="gap-2 border-slate-200">
-              <Mail className="w-4 h-4" /> Contact Support
-            </Button>
           </div>
           <div className="lg:col-span-2">
             <Accordion type="single" collapsible className="w-full">
@@ -610,7 +572,7 @@ const Footer = () => {
                 <Candy className="text-white w-5 h-5" />
               </div>
               <span className="text-white text-xl font-bold tracking-tight">
-                MEL <span className="text-cyan-500">MEDICATED</span>
+                MEL <span className="text-cyan-500">PLC</span>
               </span>
             </div>
             <p className="max-w-xs mb-8">
@@ -715,7 +677,6 @@ function App() {
         <Hero />
         <About />
         <Products />
-        <TrustSection />
         <Testimonial />
         <FAQSection />
         <Contact />
