@@ -115,7 +115,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? "bg-white/90 backdrop-blur-md shadow-sm py-3" : "bg-transparent py-5"}`}
+      className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? "bg-white/90 backdrop-blur-md shadow-sm py-3" : "bg-transparent py-5 mb-4"}`}
     >
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
         <div className="flex items-center gap-2">
@@ -176,7 +176,6 @@ const Navbar = () => {
                   {link.name}
                 </a>
               ))}
-              <Button className="bg-cyan-600 w-full mt-2">Inquire Now</Button>
             </div>
           </motion.div>
         )}
@@ -189,7 +188,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center pt-20 overflow-hidden pb-24 lg:pb-40"
+      className="relative min-h-screen flex items-center pt-28 md:pt-32 lg:pt-36 overflow-hidden pb-24 lg:pb-40"
     >
       {/* Background with Overlay */}
       <div className="absolute inset-0 z-0">
