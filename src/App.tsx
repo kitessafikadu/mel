@@ -19,6 +19,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import {
   Accordion,
   AccordionContent,
   AccordionItem,
@@ -77,6 +84,8 @@ const PRODUCTS = [
     benefits: ["Intense Cooling", "Sugar-Free", "Long Lasting"],
   },
 ];
+
+type Product = (typeof PRODUCTS)[number];
 
 const FAQS = [
   {
@@ -323,7 +332,11 @@ const About = () => {
   );
 };
 
-const Products = () => {
+const Products = ({
+  onLearnMore,
+}: {
+  onLearnMore: (product: Product) => void;
+}) => {
   return (
     <section id="products" className="py-24 bg-slate-50">
       <div className="container mx-auto px-4 md:px-6">
@@ -380,8 +393,10 @@ const Products = () => {
                     ))}
                   </div>
                   <Button
+                    type="button"
                     variant="outline"
                     className="w-full border-cyan-600 text-cyan-600 hover:bg-cyan-600 hover:text-white transition-colors"
+                    onClick={() => onLearnMore(product)}
                   >
                     Learn More
                   </Button>
@@ -669,17 +684,110 @@ const Footer = () => {
 // --- Main App ---
 
 function App() {
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+
   return (
     <div className="min-h-screen bg-white font-sans text-slate-900 selection:bg-cyan-100 selection:text-cyan-900">
       <Navbar />
       <main>
         <Hero />
         <About />
-        <Products />
+        <Products onLearnMore={setSelectedProduct} />
         <Testimonial />
         <FAQSection />
         <Contact />
       </main>
+      <Dialog
+        open={Boolean(selectedProduct)}
+        onOpenChange={(open) => {
+          if (!open) {
+            setSelectedProduct(null);
+          }
+        }}
+      >
+        <DialogContent className="sm:max-w-2xl">
+          {selectedProduct && (
+            <>
+              <DialogHeader>
+                <div className="flex items-center gap-3 mb-2">
+                  <Badge className="bg-cyan-50 text-cyan-700 border-none">
+                    {selectedProduct.category}
+                  </Badge>
+                </div>
+                <DialogTitle className="text-2xl text-slate-900">
+                  {selectedProduct.name}
+                </DialogTitle>
+                <DialogDescription className="text-slate-600 text-base">
+                  {selectedProduct.description}
+                </DialogDescription>
+              </DialogHeader>
+
+              <div className="space-y-6">
+                <div className="overflow-hidden rounded-2xl border border-slate-200">
+                  <img
+                    src={selectedProduct.image}
+                    alt={selectedProduct.name}
+                    className="h-64 w-full object-cover"
+                  />
+                </div>
+
+                <div>
+                  <h4 className="text-sm font-semibold uppercase tracking-wider text-slate-500 mb-3">
+                    Key Benefits
+                  </h4>
+                  <div className="flex flex-wrap gap-2">
+                    {selectedProduct.benefits.map((benefit) => (
+                      <span
+                        key={benefit}
+                        className="rounded-full bg-cyan-50 px-3 py-1 text-sm font-medium text-cyan-700"
+                      >
+                        {benefit}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="grid gap-4 md:grid-cols-2">
+                  <div className="rounded-2xl bg-slate-50 p-4 text-sm text-slate-600 leading-relaxed">
+                    <h4 className="font-semibold text-slate-900 mb-2">
+                      Why this product stands out
+                    </h4>
+                    <p>
+                      This product is part of our curated range of medicated
+                      confectionery designed to support wellness with clean
+                      ingredients, consistent formulation, and a taste profile
+                      people actually enjoy.
+                    </p>
+                  </div>
+
+                  <div className="rounded-2xl bg-slate-50 p-4 text-sm text-slate-600 leading-relaxed">
+                    <h4 className="font-semibold text-slate-900 mb-2">
+                      What to expect
+                    </h4>
+                    <p>
+                      Depending on the product type, it may help soothe,
+                      refresh, or support daily wellness. It is designed as a
+                      convenient option for people who want functional benefits
+                      without giving up flavor.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="rounded-2xl border border-cyan-100 bg-cyan-50 p-4 text-sm text-slate-700 leading-relaxed">
+                  <p className="font-semibold text-cyan-900 mb-1">
+                    Good to know
+                  </p>
+                  <p>
+                    For best results, follow the product directions on the
+                    package or check with your healthcare professional if you
+                    have questions about suitability for your needs.
+                  </p>
+                </div>
+              </div>
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
       <Footer />
     </div>
   );
