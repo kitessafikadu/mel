@@ -224,7 +224,7 @@ const Hero = () => {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 1.02 }}
             transition={{ duration: 1.1, ease: "easeOut" }}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover filter blur-sm"
           />
         </AnimatePresence>
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/55 via-slate-900/55 to-cyan-950/50" />
