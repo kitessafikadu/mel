@@ -2,24 +2,35 @@
 
 > Sweetening the Path to Better Health
 
-Mel Medicated Confectionery PLC blends the science of wellness with the art of confectionery. We create delicious, effective medicated treats that support your daily health journey.
+Modern landing page for Mel Medicated Confectionery PLC, built with React, Vite, TypeScript, Tailwind CSS, Framer Motion, Radix UI, and shadcn-style components.
 
-## Our Mission
+## What’s Included
 
-- Formulate safe, science-backed medicated confections that make daily health routines easy and enjoyable.
-- Use quality, transparent ingredients with clear dosing and labeling.
-- Prioritize accessibility, taste, and efficacy in every product.
+- Hero, about, product, testimonial, FAQ, contact, and footer sections.
+- Product detail dialog for the featured catalog.
+- Responsive layout with animated interactions and polished UI components.
+- Custom favicon served from `public/assets/favicon.png`.
 
-## Flagship Products
+## Getting Started
 
-- Soothing Lozenges — crafted for throat comfort and gentle relief.
-- Daily Wellness Chews — formulated with supportive vitamins and botanicals.
-- Specialty Medicated Treats — targeted small-batch formulations for specific needs.
+Install dependencies, then start the development server:
 
-## Quality & Compliance
+```bash
+npm install
+npm run dev
+```
 
-We follow rigorous quality control and partner with certified manufacturers to ensure product safety and regulatory compliance. Each batch is tested and documented.
+The app runs on port `3000` by default.
 
-## Contact
+## Available Scripts
 
-For inquiries, partnerships, or orders, reach out to: contact@melconfections.example
+- `npm run dev` - start the Vite dev server.
+- `npm run build` - type-check and build for production.
+- `npm run lint` - run ESLint across the project.
+- `npm run typecheck` - run the TypeScript compiler without emitting files.
+- `npm run preview` - preview the production build locally.
+
+## Notes
+
+- If you replace the favicon, update `public/assets/favicon.png` so the browser loads the new icon.
+- The page metadata in `index.html` is already configured for social previews and mobile web app behavior.
