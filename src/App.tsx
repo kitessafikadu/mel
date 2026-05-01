@@ -57,8 +57,7 @@ const PRODUCTS = [
     name: "Honey Ginger Lozenges",
     description:
       "Soothing relief for sore throats with natural honey and spicy ginger extracts.",
-    image:
-      "https://storage.googleapis.com/dala-prod-public-storage/generated-images/86ad4178-a1e6-434d-a5bb-4b435993f7db/product---honey-ginger-lozenges-72f15aac-1777496768552.webp",
+    image: "public/assets/images/candy1.jpg",
     category: "Relief",
     benefits: ["Natural Honey", "Immune Support", "Fast Acting"],
   },
@@ -67,21 +66,25 @@ const PRODUCTS = [
     name: "Vitamin C Herbal Gummies",
     description:
       "Daily immune booster made with real fruit juice and essential vitamins.",
-    image:
-      "https://storage.googleapis.com/dala-prod-public-storage/attachments/a1a7d504-7e3c-4561-a6d4-fd2303af0682/1777495920801_melllllll.jpg",
+    image: "/assets/images/candy.jpg",
     category: "Wellness",
     benefits: ["Zinc Infused", "Sugar Free", "Kid Friendly"],
   },
   {
     id: 3,
-    name: "Menthol Eucalyptus Drops",
+    name: "Menthol Eucalyptus",
     description:
       "Clear your airways instantly with our extra-strength cooling formula.",
-    image:
-      "https://storage.googleapis.com/dala-prod-public-storage/generated-images/86ad4178-a1e6-434d-a5bb-4b435993f7db/hero-image---medicated-confectionery-showcase-8be94d73-1777496767983.webp",
+    image: "public/assets/images/candy2.jpg",
     category: "Respiratory",
     benefits: ["Intense Cooling", "Sugar-Free", "Long Lasting"],
   },
+];
+
+const HERO_BACKGROUNDS = [
+  "/assets/illustrations/annie-spratt-PPLCsqYUGTY-unsplash.svg",
+  "/assets/illustrations/neokarla-kiko-uucSXBMlqIU-unsplash.svg",
+  "/assets/illustrations/public-domain-vectors-Xtc7yxu-Jko-unsplash.svg",
 ];
 
 type Product = (typeof PRODUCTS)[number];
@@ -193,6 +196,18 @@ const Navbar = () => {
 };
 
 const Hero = () => {
+  const [heroBackgroundIndex, setHeroBackgroundIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      setHeroBackgroundIndex(
+        (currentIndex) => (currentIndex + 1) % HERO_BACKGROUNDS.length,
+      );
+    }, 7000);
+
+    return () => window.clearInterval(interval);
+  }, []);
+
   return (
     <section
       id="home"
@@ -200,12 +215,19 @@ const Hero = () => {
     >
       {/* Background with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="https://storage.googleapis.com/dala-prod-public-storage/generated-images/86ad4178-a1e6-434d-a5bb-4b435993f7db/hero-image---medicated-confectionery-showcase-8be94d73-1777496767983.webp"
-          alt="Medicated Confectionery"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-slate-900/60" />
+        <AnimatePresence mode="wait">
+          <motion.img
+            key={HERO_BACKGROUNDS[heroBackgroundIndex]}
+            src={HERO_BACKGROUNDS[heroBackgroundIndex]}
+            alt="Hero background illustration"
+            initial={{ opacity: 0, scale: 1.05 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 1.02 }}
+            transition={{ duration: 1.1, ease: "easeOut" }}
+            className="w-full h-full object-cover"
+          />
+        </AnimatePresence>
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/55 via-slate-900/55 to-cyan-950/50" />
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -280,7 +302,7 @@ const About = () => {
           >
             <div className="absolute -top-6 -left-6 w-32 h-32 bg-cyan-100 rounded-full -z-10" />
             <img
-              src="https://storage.googleapis.com/dala-prod-public-storage/generated-images/86ad4178-a1e6-434d-a5bb-4b435993f7db/production-quality-control-76deca93-1777496769056.webp"
+              src="public/assets/images/production.jpg"
               alt="Mel Medicated Production"
               className="rounded-2xl shadow-2xl relative z-10"
             />
@@ -484,7 +506,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-bold">Phone</p>
-                    <p className="text-cyan-100 text-sm">+251 11 234 5678</p>
+                    <p className="text-cyan-100 text-sm">+251 94 842 1132</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
