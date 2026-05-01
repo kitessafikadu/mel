@@ -7,8 +7,9 @@ import {
   CarouselNext,
 } from "@/components/ui/carousel";
 
-const TRUST_AVATAR =
-  "https://storage.googleapis.com/dala-prod-pulic-storage/generated-images/86ad4178-a1e6-434d-a5bb-4b435993f7db/trust-and-care---professional-endorsement-d7980e22-1777496771091.webp";
+const TRUST_AVATAR = "https://i.pravatar.cc/150?img=45";
+
+const TRUST_AVATAR_2 = "https://i.pravatar.cc/150?img=12";
 
 const TESTIMONIALS = [
   {
@@ -23,7 +24,7 @@ const TESTIMONIALS = [
       "Mel Medicated's formulations are evidence-based and consistently dosed — I confidently recommend them for clinical use and patient guidance.",
     name: "Dr. Alex Thompson",
     role: "Pharmacist, Clinical Advisor",
-    avatar: TRUST_AVATAR,
+    avatar: TRUST_AVATAR_2,
   },
 ];
 
@@ -47,7 +48,10 @@ export default function Testimonial() {
                 <CarouselItem key={i} className="px-4 sm:px-6">
                   <div className="bg-white rounded-2xl shadow-md p-8 max-w-3xl mx-auto text-slate-900">
                     <p className="text-lg text-slate-700 leading-relaxed">
-                      “{t.quote}”
+                      <span className="text-4xl text-slate-400 align-top mr-3">
+                        “
+                      </span>
+                      {t.quote}
                     </p>
                     <div className="flex items-center gap-4 mt-6">
                       <div className="w-12 h-12 rounded-full overflow-hidden bg-slate-100">
