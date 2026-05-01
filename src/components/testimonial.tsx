@@ -14,8 +14,15 @@ const TESTIMONIALS = [
   {
     quote:
       "Mel Medicated products have consistently demonstrated the highest quality in the functional confectionery space. Their commitment to clean ingredients and precise dosages makes them a brand I confidently recommend.",
-    name: "Dr. Sarah Thompson",
-    role: "Pharmacist, Chief Pharmaceutical Advisor",
+    name: "Dr. Sarah Daniel",
+    role: "Food Sciences Specialist",
+    avatar: TRUST_AVATAR,
+  },
+  {
+    quote:
+      "Mel Medicated's formulations are evidence-based and consistently dosed — I confidently recommend them for clinical use and patient guidance.",
+    name: "Dr. Alex Thompson",
+    role: "Pharmacist, Clinical Advisor",
     avatar: TRUST_AVATAR,
   },
 ];
