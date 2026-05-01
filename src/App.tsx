@@ -9,7 +9,6 @@ import {
   MapPin,
   Phone,
   Mail,
-  ChevronRight,
   CheckCircle2,
   Instagram,
   Facebook,
@@ -562,7 +561,7 @@ const Contact = () => {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full bg-cyan-600 hover:bg-cyan-700 text-white h-14 text-lg rounded-xl shadow-lg shadow-cyan-600/20"
+                  className="w-full bg-cyan-600 hover:bg-cyan-700 text-white h-14 text-lg shadow-lg shadow-cyan-600/20"
                 >
                   Send Message
                 </Button>
