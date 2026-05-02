@@ -6,17 +6,9 @@ import {
   Candy,
   HeartPulse,
   ShieldCheck,
-  MapPin,
-  Phone,
-  Mail,
   CheckCircle2,
-  Instagram,
-  Facebook,
-  Twitter,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import {
   Dialog,
   DialogContent,
@@ -38,8 +30,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { toast } from "sonner";
 import Testimonial from "@/components/testimonial";
+import Contact from "@/components/contact";
 
 // --- Constants & Data ---
 
@@ -463,132 +455,6 @@ const FAQSection = () => {
                 </AccordionItem>
               ))}
             </Accordion>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-const Contact = () => {
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast.success("Message sent! We will get back to you soon.");
-  };
-
-  return (
-    <section id="contact" className="py-24 bg-slate-50">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="bg-white rounded-3xl overflow-hidden shadow-xl">
-          <div className="grid md:grid-cols-5">
-            <div className="md:col-span-2 bg-cyan-600 p-10 md:p-14 text-white">
-              <h2 className="text-3xl font-bold mb-8">Get in Touch</h2>
-              <p className="text-cyan-100 mb-12">
-                Have questions about our products or interested in becoming a
-                distributor? Our team is here to help.
-              </p>
-
-              <div className="space-y-8">
-                <div className="flex items-start gap-4">
-                  <div className="bg-white/10 p-2.5 rounded-lg backdrop-blur-md">
-                    <MapPin className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <p className="font-bold">Headquarters</p>
-                    <p className="text-cyan-100 text-sm">
-                      Industrial Zone Sector 4, Addis Ababa, Ethiopia
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="bg-white/10 p-2.5 rounded-lg backdrop-blur-md">
-                    <Phone className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <p className="font-bold">Phone</p>
-                    <p className="text-cyan-100 text-sm">+251 94 842 1132</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="bg-white/10 p-2.5 rounded-lg backdrop-blur-md">
-                    <Mail className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <p className="font-bold">Email</p>
-                    <p className="text-cyan-100 text-sm">
-                      info@melmedicated.com
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex gap-4 mt-16">
-                {[Facebook, Twitter, Instagram].map((Icon, i) => (
-                  <a
-                    key={i}
-                    href="#"
-                    className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-cyan-600 transition-colors"
-                  >
-                    <Icon className="w-5 h-5" />
-                  </a>
-                ))}
-              </div>
-            </div>
-
-            <div className="md:col-span-3 p-10 md:p-14">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid sm:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label className="text-sm font-semibold text-slate-700">
-                      Full Name
-                    </label>
-                    <Input
-                      placeholder="John Doe"
-                      required
-                      className="bg-slate-50 border-none h-12"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-sm font-semibold text-slate-700">
-                      Email Address
-                    </label>
-                    <Input
-                      type="email"
-                      placeholder="john@example.com"
-                      required
-                      className="bg-slate-50 border-none h-12"
-                    />
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-semibold text-slate-700">
-                    Subject
-                  </label>
-                  <Input
-                    placeholder="Inquiry about distribution"
-                    required
-                    className="bg-slate-50 border-none h-12"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-semibold text-slate-700">
-                    Message
-                  </label>
-                  <Textarea
-                    placeholder="How can we help you?"
-                    required
-                    className="bg-slate-50 border-none min-h-[150px] resize-none"
-                  />
-                </div>
-                <Button
-                  type="submit"
-                  size="lg"
-                  className="w-full bg-cyan-600 hover:bg-cyan-700 text-white h-14 text-lg shadow-lg shadow-cyan-600/20"
-                >
-                  Send Message
-                </Button>
-              </form>
-            </div>
           </div>
         </div>
       </div>
