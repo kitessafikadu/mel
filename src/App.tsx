@@ -49,7 +49,7 @@ const PRODUCTS = [
     name: "Honey Ginger Lozenges",
     description:
       "Soothing relief for sore throats with natural honey and spicy ginger extracts.",
-    image: "public/assets/images/candy1.jpg",
+    image: "/assets/images/candy1.jpg",
     category: "Relief",
     benefits: ["Natural Honey", "Immune Support", "Fast Acting"],
   },
@@ -67,7 +67,7 @@ const PRODUCTS = [
     name: "Menthol Eucalyptus",
     description:
       "Clear your airways instantly with our extra-strength cooling formula.",
-    image: "public/assets/images/candy2.jpg",
+    image: "/assets/images/candy2.jpg",
     category: "Respiratory",
     benefits: ["Intense Cooling", "Sugar-Free", "Long Lasting"],
   },
@@ -294,7 +294,7 @@ const About = () => {
           >
             <div className="absolute -top-6 -left-6 w-32 h-32 bg-cyan-100 rounded-full -z-10" />
             <img
-              src="public/assets/images/production.jpg"
+              src="/assets/images/production.jpg"
               alt="Mel Medicated Production"
               className="rounded-2xl shadow-2xl relative z-10"
             />
