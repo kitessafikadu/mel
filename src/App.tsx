@@ -309,8 +309,8 @@ const About = () => {
             <span className="text-cyan-600 font-bold tracking-wider uppercase text-sm mb-4 block">
               Our Legacy
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-              Pioneering Health-Infused Confectionery since 2010
+            <h2 className="text-2xl md:text-4xl font-bold text-slate-900 mb-6">
+              Pioneering Health-Infused Confectionery 
             </h2>
             <p className="text-slate-600 mb-6 leading-relaxed">
               Mel Medicated Confectionery PLC started with a simple vision: to
