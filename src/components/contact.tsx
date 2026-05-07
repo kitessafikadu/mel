@@ -4,14 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 
-import {
-  MapPin,
-  Phone,
-  Mail,
-  Instagram,
-  Facebook,
-  Twitter,
-} from "lucide-react";
+import { Instagram, Facebook, Twitter } from "lucide-react";
 
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -53,41 +46,6 @@ export default function Contact() {
                 Have questions about our products or interested in becoming a
                 distributor? Our team is here to help.
               </p>
-
-              <div className="space-y-8">
-                <div className="flex items-start gap-4">
-                  <div className="bg-white/10 p-2.5 rounded-lg backdrop-blur-md">
-                    <MapPin className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <p className="font-bold">Headquarters</p>
-                    <p className="text-cyan-100 text-sm">
-                      Industrial Zone Sector 4, Addis Ababa, Ethiopia
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="bg-white/10 p-2.5 rounded-lg backdrop-blur-md">
-                    <Phone className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <p className="font-bold">Phone</p>
-                    <p className="text-cyan-100 text-sm">+251 91 142 1132</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="bg-white/10 p-2.5 rounded-lg backdrop-blur-md">
-                    <Mail className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <p className="font-bold">Email</p>
-                    <p className="text-cyan-100 text-sm">
-                      info@melmedicated.com
-                    </p>
-                  </div>
-                </div>
-              </div>
-
               <div className="flex gap-4 mt-16">
                 {[Facebook, Twitter, Instagram].map((Icon, i) => (
                   <a
