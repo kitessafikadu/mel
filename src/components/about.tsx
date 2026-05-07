@@ -12,7 +12,7 @@ const About = () => {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="absolute -top-6 -left-6 w-32 h-32 bg-cyan-100 rounded-full -z-10" />
+            <div className="absolute -top-6 -left-6 w-32 h-32 bg-blue-100 rounded-full -z-10" />
             <img
               src="/assets/images/production.jpg"
               alt="Mel Medicated Production"
@@ -26,7 +26,7 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <span className="text-cyan-600 font-bold tracking-wider uppercase text-sm mb-4 block">
+            <span className="text-blue-700 font-bold tracking-wider uppercase text-sm mb-4 block">
               Our Legacy
             </span>
             <h2 className="text-2xl md:text-4xl font-bold text-slate-900 mb-6">

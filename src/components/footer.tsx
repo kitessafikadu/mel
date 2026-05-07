@@ -7,11 +7,13 @@ const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 mb-16">
           <div className="col-span-2 lg:col-span-2">
             <div className="flex items-center gap-2 mb-6">
-              <img
-                src="/assets/logos/logo-nobg.png"
-                alt="Mel Logo"
-                className="h-8 w-auto"
-              />
+              <div className="bg-blue-100 p-2 rounded-lg">
+                <img
+                  src="/assets/logos/logo-nobg.png"
+                  alt="Mel Logo"
+                  className="h-8 w-auto"
+                />
+              </div>
             </div>
             <p className="max-w-xs mb-8">
               Pioneering the future of health-infused confectionery with
@@ -26,7 +28,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="hover:text-cyan-500 transition-colors"
+                    className="hover:text-blue-600 transition-colors"
                   >
                     {link.name}
                   </a>
@@ -39,22 +41,22 @@ const Footer = () => {
             <h4 className="text-white font-bold mb-6">Products</h4>
             <ul className="space-y-4">
               <li>
-                <a href="#" className="hover:text-cyan-500 transition-colors">
+                <a href="#" className="hover:text-blue-600 transition-colors">
                   Lozenges
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-cyan-500 transition-colors">
+                <a href="#" className="hover:text-blue-600 transition-colors">
                   Gummies
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-cyan-500 transition-colors">
+                <a href="#" className="hover:text-blue-600 transition-colors">
                   Sugar-Free
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-cyan-500 transition-colors">
+                <a href="#" className="hover:text-blue-600 transition-colors">
                   Herbal Blends
                 </a>
               </li>
@@ -65,17 +67,17 @@ const Footer = () => {
             <h4 className="text-white font-bold mb-6">Legal</h4>
             <ul className="space-y-4">
               <li>
-                <a href="#" className="hover:text-cyan-500 transition-colors">
+                <a href="#" className="hover:text-blue-600 transition-colors">
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-cyan-500 transition-colors">
+                <a href="#" className="hover:text-blue-600 transition-colors">
                   Terms of Service
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-cyan-500 transition-colors">
+                <a href="#" className="hover:text-blue-600 transition-colors">
                   Cookie Policy
                 </a>
               </li>

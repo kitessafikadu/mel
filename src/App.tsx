@@ -25,7 +25,7 @@ function App() {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
   return (
-    <div className="min-h-screen bg-white font-sans text-slate-900 selection:bg-cyan-100 selection:text-cyan-900">
+    <div className="min-h-screen bg-white font-sans text-slate-900 selection:bg-blue-100 selection:text-blue-900">
       <Navbar />
       <main>
         <Hero />
@@ -48,7 +48,7 @@ function App() {
             <>
               <DialogHeader>
                 <div className="flex items-center gap-3 mb-2">
-                  <Badge className="bg-cyan-50 text-cyan-700 border-none">
+                  <Badge className="bg-blue-50 text-blue-700 border-none">
                     {selectedProduct.category}
                   </Badge>
                 </div>
@@ -77,7 +77,7 @@ function App() {
                     {selectedProduct.benefits.map((benefit) => (
                       <span
                         key={benefit}
-                        className="rounded-full bg-cyan-50 px-3 py-1 text-sm font-medium text-cyan-700"
+                        className="rounded-full bg-blue-50 px-3 py-1 text-sm font-medium text-blue-700"
                       >
                         {benefit}
                       </span>
@@ -111,8 +111,8 @@ function App() {
                   </div>
                 </div>
 
-                <div className="rounded-2xl border border-cyan-100 bg-cyan-50 p-4 text-sm text-slate-700 leading-relaxed">
-                  <p className="font-semibold text-cyan-900 mb-1">
+                <div className="rounded-2xl border border-blue-100 bg-blue-50 p-4 text-sm text-slate-700 leading-relaxed">
+                  <p className="font-semibold text-blue-900 mb-1">
                     Good to know
                   </p>
                   <p>

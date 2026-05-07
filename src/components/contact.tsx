@@ -40,9 +40,9 @@ export default function Contact() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="bg-white rounded-3xl overflow-hidden shadow-xl">
           <div className="grid md:grid-cols-5">
-            <div className="md:col-span-2 bg-cyan-600 p-10 md:p-14 text-white">
+            <div className="md:col-span-2 bg-blue-700 p-10 md:p-14 text-white">
               <h2 className="text-3xl font-bold mb-8">Get in Touch</h2>
-              <p className="text-cyan-100 mb-12">
+              <p className="text-blue-100 mb-12">
                 Have questions about our products or interested in becoming a
                 distributor? Our team is here to help.
               </p>
@@ -51,7 +51,7 @@ export default function Contact() {
                   <a
                     key={i}
                     href="#"
-                    className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-cyan-600 transition-colors"
+                    className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-blue-700 transition-colors"
                   >
                     <Icon className="w-5 h-5" />
                   </a>
@@ -111,7 +111,7 @@ export default function Contact() {
                   type="submit"
                   disabled={isSubmitting}
                   size="lg"
-                  className="w-full bg-cyan-600 hover:bg-cyan-700 text-white h-14 text-lg shadow-lg shadow-cyan-600/20"
+                  className="w-full bg-blue-700 hover:bg-blue-800 text-white h-14 text-lg shadow-lg shadow-blue-700/20"
                 >
                   {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>

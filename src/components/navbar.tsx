@@ -18,12 +18,14 @@ const Navbar = () => {
       className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? "bg-white/90 backdrop-blur-md shadow-sm py-3" : "bg-transparent py-5 mb-4"}`}
     >
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
-        <div className="flex items-center gap-2">
-          <img
-            src="/assets/logos/logo-nobg.png"
-            alt="Mel Logo"
-            className="h-10 w-auto"
-          />
+        <div className="flex items-center gap-3">
+          <div className="bg-white/90 backdrop-blur-sm p-2 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <img
+              src="/assets/logos/logo-nobg.png"
+              alt="Mel Logo"
+              className="h-8 w-auto"
+            />
+          </div>
         </div>
 
         {/* Desktop Nav */}
@@ -32,7 +34,7 @@ const Navbar = () => {
             <a
               key={link.name}
               href={link.href}
-              className={`text-sm font-medium transition-colors hover:text-cyan-600 ${scrolled ? "text-slate-600" : "text-white/90"}`}
+              className={`text-sm font-medium transition-colors hover:text-blue-700 ${scrolled ? "text-slate-600" : "text-white/90"}`}
             >
               {link.name}
             </a>
